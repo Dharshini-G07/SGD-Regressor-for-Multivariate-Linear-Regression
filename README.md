@@ -8,27 +8,26 @@ To write a program to predict the price of the house and number of occupants in 
 2. Anaconda – Python 3.7 Installation / Jupyter notebook
 
 ## Algorithm
-1.Load the Dataset
 
-2.Create DataFrame
+1.Load Dataset: Fetch the California Housing dataset using fetch_california_housing() and convert it into a pandas DataFrame.
 
-3.Prepare Features and Targets
+2.Inspect Data: Print the first few rows of the DataFrame to understand the structure of the dataset and the target variables.
 
-4.Split into Training and Test Sets
+3.Separate Features and Target Variables: Split the dataset into feature variables (X) and target variables (Y), where Y includes both AveOccup and HousingPrice.
 
-5.Scale the Features and Targets
+4.Split Data into Training and Test Sets: Use train_test_split() to split the data into training and test sets (e.g., 80% for training and 20% for testing).
 
-6.Initialize the Regressor
+5.Scale the Features and Target Variables: Apply StandardScaler to scale both the feature data (X) and the target variables (Y) to have zero mean and unit variance.
 
-7.Train the Model
+6.Initialize the Model: Create an instance of SGDRegressor for performing stochastic gradient descent, setting maximum iterations and tolerance values.
 
-8.Make Predictions
+7.Wrap Model with MultiOutputRegressor: Use MultiOutputRegressor to enable the SGDRegressor to handle multiple target outputs (AveOccup and HousingPrice).
 
-9.Inverse Transform Predictions
+8.Train the Model: Fit the model on the scaled training data (X_train, Y_train).
 
-10.Evaluate Model Performance
+9.Make Predictions: Predict the target values (AveOccup and HousingPrice) on the test set (X_test) using the trained model.
 
-11.Display Results
+10.Evaluate the Model: Inverse transform the predictions and true target values back to their original scale, then calculate the Mean Squared Error (MSE) to evaluate the model’s performance.
 
 ## Program:
 ```
